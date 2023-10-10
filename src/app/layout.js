@@ -1,3 +1,4 @@
+import NavBar from '@/components/NavBar/navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar/>
+        {children}
+        <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script>
+        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+        </body>
     </html>
   )
 }
